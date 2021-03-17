@@ -1,0 +1,57 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# File: C:\Users\r2440\OneDrive\Documents\Projetos-Quartus\Placa mini-fpga EP2C5144\PrototipoCalculadoraRev1\calcRev1.csv
+# Generated on: Fri Dec 11 20:25:27 2020
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,I/O Standard,Current Strength,VREF Group,Reserved,Differential Pair
+a[3],Input,PIN_47,4,,,B4_N1,,
+a[2],Input,PIN_114,2,,,B2_N0,,
+a[1],Input,PIN_112,2,,,B2_N0,,
+a[0],Input,PIN_113,2,,,B2_N0,,
+b[3],Input,PIN_55,4,,,B4_N1,,
+b[2],Input,PIN_52,4,,,B4_N1,,
+b[1],Input,PIN_51,4,,,B4_N1,,
+b[0],Input,PIN_48,4,,,B4_N1,,
+led[1],Output,PIN_44,4,,,B4_N1,,
+led[2],Output,PIN_45,4,,,B4_N1,,
+led[3],Output,PIN_43,4,,,B4_N1,,
+led[4],Output,PIN_42,4,,,B4_N1,,
+led[5],Output,PIN_41,4,,,B4_N1,,
+led[6],Output,PIN_40,4,,,B4_N1,,
+led[7],Output,PIN_31,1,,,B1_N1,,
+led[8],Output,PIN_32,1,,,B1_N1,,
+overflow,Output,PIN_3,1,,,B1_N0,,
+res_negativo,Output,PIN_141,2,,,B2_N1,,
+sa[1],Output,PIN_69,4,,,B4_N0,,
+sa[0],Output,PIN_64,4,,,B4_N0,,
+sb[1],Output,PIN_70,4,,,B4_N0,,
+sb[0],Output,PIN_63,4,,,B4_N0,,
+sc[1],Output,PIN_100,3,,,B3_N0,,
+sc[0],Output,PIN_104,3,,,B3_N0,,
+sd[1],Output,PIN_99,3,,,B3_N0,,
+sd[0],Output,PIN_103,3,,,B3_N0,,
+se[1],Output,PIN_97,3,,,B3_N0,,
+se[0],Output,PIN_101,3,,,B3_N0,,
+sel_1,Input,PIN_53,4,,,B4_N1,,
+sel_2,Input,PIN_57,4,,,B4_N1,,
+sf[1],Output,PIN_71,4,,,B4_N0,,
+sf[0],Output,PIN_65,4,,,B4_N0,,
+sg[1],Output,PIN_72,4,,,B4_N0,,
+sg[0],Output,PIN_67,4,,,B4_N0,,
+clk,Input,PIN_17,1,,,B1_N0,,
+rst,Input,PIN_4,1,,,B1_N0,,

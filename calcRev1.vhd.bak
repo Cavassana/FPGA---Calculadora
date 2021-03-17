@@ -1,0 +1,56 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+use IEEE.std_logic_unsigned.ALL;
+
+LIBRARY lpm;
+USE lpm.all;
+
+ENTITY calcRev1 IS 
+GENERIC( n 				: INTEGER := 4);		-- n bits
+    PORT(a, b						: IN STD_LOGIC_VECTOR(n-1 DOWNTO 0); -- entradas do somador
+			sel_1,sel_2				: IN STD_LOGIC; -- seleciona operacao
+			overflow					: OUT STD_LOGIC;
+			res_negativo			: OUT STD_LOGIC;
+			led						: OUT STD_LOGIC_VECTOR(1 TO 8);
+			sa,sb,sc,sd,se,sf,sg	: OUT STD_LOGIC_VECTOR(1 downto 0));
+END calcRev1;
+
+ARCHITECTURE teste_calcRev1 OF calcRev1 IS 
+
+-- SIGNAL flag 				: STD_LOGIC;
+SIGNAL sel_mux				: STD_LOGIC_VECTOR(1 DOWNTO 0):= (OTHERS => '0');
+SIGNAL overflow_soma		: STD_LOGIC;
+SIGNAL res_soma_bin		: UNSIGNED(3 downto 0):= (OTHERS => '0');
+SIGNAL a_x, b_y			: UNSIGNED(3 downto 0):= (OTHERS => '0');
+SIGNAL mostra_res			: STD_LOGIC_VECTOR(3 downto 0):= (OTHERS => '0');
+
+BEGIN
+sel_mux <= sel_2 & sel_1;
+-- leds
+PROCESS(mostra_res)
+	BEGIN 
+	FOR i IN mostra_res'RANGE LOOP
+		IF mostra_res(i)='1' THEN 
+			led(i+1) <= '1'; 
+		ELSE led(i+1) <= '0';	
+		END IF;
+	END LOOP;
+END PROCESS;		
+-- Realiza operações
+
+-- Seleciona resultado	
+mostrador: PROCESS(a,b,sel_mux) 
+	BEGIN
+		CASE sel_mux IS
+			WHEN "00" => mostra_res <= STD_LOGIC_VECTOR(res_soma_bin);
+			WHEN "01" => mostra_res <= STD_LOGIC_VECTOR(res_soma_bin);
+			WHEN OTHERS => mostra_res <= "0000";
+		END CASE;	
+	END PROCESS;
+	
+-- Display	
+-- unidade:	
+--- dezena:
+	
+END teste_calcRev1;
